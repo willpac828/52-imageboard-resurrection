@@ -1,0 +1,16 @@
+body {
+  margin: 0;
+  background-color: $c-light-grey;
+  color: $c-text;
+  box-sizing: border-box;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+img {
+  max-width: 100%;
+  align-self: center;
+}
