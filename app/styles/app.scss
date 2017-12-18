@@ -2,7 +2,6 @@
 // @import 'normalize';
 
 $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
-@import 'font-awesome';
 //
 // colors
 $c-white: #fff;
@@ -17,5 +16,39 @@ $c-success: #449343;
 $m-max-width: 60rem;
 $m-gutter: 1rem;
 
+@import 'font-awesome';
 @import 'box-sizing';
 @import 'resets';
+
+.top-nav {
+  // honestly not sure why position relative is necessary
+  position: relative;
+  padding: ($m-gutter / 1.5) $m-gutter;
+  background: $c-primary;
+  color: $c-primary-dark;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+}
+
+.container {
+  max-width: $m-max-width;
+  margin: auto;
+}
+
+.form-toggle {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+
+  &__icon {
+    @extend .fa;
+    @extend .fa-bars;
+    cursor: pointer;
+  }
+}
+
+.top-form {
+  padding: $m-gutter;
+  background: $c-white;
+}
