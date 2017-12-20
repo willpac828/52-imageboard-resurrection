@@ -16,6 +16,9 @@ $c-success: #449343;
 $m-max-width: 60rem;
 $m-gutter: 1rem;
 
+// shadows
+$shadow-1: 2px 2px 5px rgba(0, 0, 0, 0.4);
+
 @import 'font-awesome';
 @import 'box-sizing';
 @import 'resets';
@@ -26,7 +29,7 @@ $m-gutter: 1rem;
   padding: ($m-gutter / 1.5) $m-gutter;
   background: $c-primary;
   color: $c-primary-dark;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.4);
+  box-shadow: $shadow-1;
 }
 
 .container {
@@ -49,6 +52,44 @@ $m-gutter: 1rem;
 }
 
 .top-form {
-  padding: $m-gutter;
+  padding: ($m-gutter * 2) $m-gutter;
   background: $c-white;
+}
+
+.form-control {
+
+  // this next line says look for the sibling of the parent with the same class name.
+  & + & {
+    margin-top: $m-gutter;
+  }
+
+  &__input {
+    width: 100%;
+    padding: 0.2rem;
+    font: inherit;
+  }
+}
+
+.form-actions {
+  display: flex;
+  justify-content: flex-end;
+
+  // if the parent selector (&) comes after anything (*)
+  * + & {
+    margin-top: $m-gutter;
+  }
+
+  // inside of the parent selector, select the second thing
+  > * + * {
+    margin-left: $m-gutter;
+  }
+}
+
+.button {
+  padding: $m-gutter;
+  border: 0;
+  border-radius: 4%;
+  background: $c-primary;
+  color: $c-white;
+  font: inherit;
 }
