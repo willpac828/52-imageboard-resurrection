@@ -1,0 +1,28 @@
+.button {
+  padding: $m-gutter;
+  border: 0;
+  border-radius: 4%;
+  background: $c-primary;
+  color: $c-white;
+  font-family: inherit;
+  text-transform: uppercase;
+  cursor: pointer;
+
+
+  &--cancel {
+    background: $c-light-grey;
+    color: $c-text;
+
+    &:hover {
+      background: lighten($c-light-grey, 5%);
+    }
+  }
+
+  &--success {
+    background: $c-success;
+
+    &:hover {
+      background: lighten($c-success, 10%);
+    }
+  }
+}

@@ -1,0 +1,22 @@
+.top-nav {
+  // honestly not sure why position relative is necessary
+  position: relative;
+  padding: ($m-gutter / 1.5) $m-gutter;
+  background: $c-primary;
+  color: $c-primary-dark;
+  box-shadow: $shadow-1;
+}
+
+.form-toggle {
+  padding: 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font: inherit;
+
+  &__icon {
+    @extend .fa;
+    @extend .fa-bars;
+    cursor: pointer;
+  }
+}

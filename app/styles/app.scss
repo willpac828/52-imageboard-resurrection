@@ -7,10 +7,13 @@ $fa-font-path: '//netdna.bootstrapcdn.com/font-awesome/4.3.0/fonts';
 $c-white: #fff;
 $c-light-grey: #d5d5d5;
 $c-dark-grey: #c6c6c6;
-$c-text: #9e9e9e;
+$c-text: #838383;
 $c-primary: #485a9c;
 $c-primary-dark: darken($c-primary, 30%);
 $c-success: #449343;
+
+// fonts
+$f-primary: 'Lato', sans-serif;
 
 // measurements
 $m-max-width: 60rem;
@@ -22,74 +25,7 @@ $shadow-1: 2px 2px 5px rgba(0, 0, 0, 0.4);
 @import 'font-awesome';
 @import 'box-sizing';
 @import 'resets';
-
-.top-nav {
-  // honestly not sure why position relative is necessary
-  position: relative;
-  padding: ($m-gutter / 1.5) $m-gutter;
-  background: $c-primary;
-  color: $c-primary-dark;
-  box-shadow: $shadow-1;
-}
-
-.container {
-  max-width: $m-max-width;
-  margin: auto;
-}
-
-.form-toggle {
-  padding: 0;
-  border: 0;
-  background: none;
-  color: inherit;
-  font: inherit;
-
-  &__icon {
-    @extend .fa;
-    @extend .fa-bars;
-    cursor: pointer;
-  }
-}
-
-.top-form {
-  padding: ($m-gutter * 2) $m-gutter;
-  background: $c-white;
-}
-
-.form-control {
-
-  // this next line says look for the sibling of the parent with the same class name.
-  & + & {
-    margin-top: $m-gutter;
-  }
-
-  &__input {
-    width: 100%;
-    padding: 0.2rem;
-    font: inherit;
-  }
-}
-
-.form-actions {
-  display: flex;
-  justify-content: flex-end;
-
-  // if the parent selector (&) comes after anything (*)
-  * + & {
-    margin-top: $m-gutter;
-  }
-
-  // inside of the parent selector, select the second thing
-  > * + * {
-    margin-left: $m-gutter;
-  }
-}
-
-.button {
-  padding: $m-gutter;
-  border: 0;
-  border-radius: 4%;
-  background: $c-primary;
-  color: $c-white;
-  font: inherit;
-}
+@import 'layout';
+@import 'button';
+@import 'nav';
+@import 'form';
