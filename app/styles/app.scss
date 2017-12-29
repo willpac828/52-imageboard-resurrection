@@ -16,7 +16,7 @@ $c-success: #449343;
 $f-primary: 'Lato', sans-serif;
 
 // measurements
-$m-max-width: 60rem;
+$m-max-width: 40rem;
 $m-gutter: 1rem;
 
 // shadows
@@ -29,3 +29,18 @@ $shadow-1: 2px 2px 5px rgba(0, 0, 0, 0.4);
 @import 'button';
 @import 'nav';
 @import 'form';
+
+.card {
+  margin: 0 $m-gutter;
+  padding:  $m-gutter;
+  background: $c-white;
+  box-shadow: $shadow-1;
+
+  &__pic {
+    width: calc(100% + 2rem);
+    // had to put max-width: none; to allow width to overtake the inherited(?) max-width;
+    max-width: none;
+    margin: -$m-gutter;
+    margin-bottom: 0;
+  }
+}

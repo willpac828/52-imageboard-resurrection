@@ -1,4 +1,26 @@
 .container {
   max-width: $m-max-width;
   margin: auto;
+
+  &--bg {
+    background: $c-dark-grey;
+  }
+}
+
+.section {
+  padding: $m-gutter;
+}
+
+.grid {
+  display: flex;
+  flex-direction: column;
+  // flex-wrap: wrap;
+  margin: 0 (-$m-gutter);
+
+  &__item {
+    // Ryan has the line below as the gutter variables. Check out his videos if confused
+    flex-basis: calc(100% / 2 - 2rem);
+    flex-grow: 1;
+    margin: $m-gutter;
+  }
 }
